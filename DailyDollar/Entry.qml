@@ -28,7 +28,7 @@ Page {
             Text {
                 anchors.fill: parent
                 text: inputAmount.text=="" ? qsTr("Enter amount here") : ""
-                color: black
+                color: 'black'
                 font.pointSize: 30
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
