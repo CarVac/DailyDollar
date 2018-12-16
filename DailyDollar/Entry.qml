@@ -25,14 +25,6 @@ Page {
             border.color: 'black'
             border.width: parent.width/200
             radius: height/10
-            Text {
-                anchors.fill: parent
-                text: inputAmount.text=="" ? qsTr("Enter amount here") : ""
-                color: 'black'
-                font.pointSize: 30
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-            }
 
             TextInput {
                 id: inputAmount
@@ -42,6 +34,58 @@ Page {
                 inputMethodHints: Qt.ImhFormattedNumbersOnly
                 verticalAlignment: TextInput.AlignVCenter
                 horizontalAlignment: TextInput.AlignHCenter
+            }
+            Item { // spacer
+                width: parent.width
+                height: parent.height/10
+            }
+        }
+
+        Item {
+            width: parent.width
+            height: parent.height/10
+        }
+
+        Text {
+            width: parent.width
+            height: parent.width/7
+            text: qsTr("Description")
+            font.pointSize: 30
+        }
+
+        Rectangle {
+            id: description
+            width: parent.width
+            height: parent.width/5
+            color: 'white'
+            border.color: 'black'
+            border.width: parent.width/200
+            radius: height/10
+
+            TextInput {
+                id: inputDescription
+                anchors.fill: parent
+                font.pointSize: 30
+                color: 'black'
+                verticalAlignment: TextInput.AlignVCenter
+                horizontalAlignment: TextInput.AlignHCenter
+            }
+        }
+
+        Item {
+            width: parent.width
+            height: parent.height/10
+        }
+
+        Button {
+            width: parent.width
+            height: parent.width/5
+            text: qsTr("Submit")
+            font.pointSize: 30
+
+            onPressed: {
+                inputAmount.text = ""
+                inputDescription.text = ""
             }
         }
     }
