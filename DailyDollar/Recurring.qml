@@ -6,10 +6,23 @@ Page {
     width: 720
     height: 1280
 
-    Rectangle {
-        anchors.centerIn: parent
-        width: Math.min(parent.height,parent.width)/2
-        height: Math.min(parent.height,parent.width)/2
-        color: 'green'
+    header: Label {
+        text: qsTr("$25.40")
+        font.pointSize: 30
+        padding: parent.width/30
     }
+
+    Column {
+        width: parent.width*0.95
+        height: parent.height*0.95
+        anchors.centerIn: parent
+
+        Rectangle {
+            id: chartrect
+            width: parent.width
+            height: parent.height*0.3
+            color: 'blue'
+        }
+    }
+
 }
