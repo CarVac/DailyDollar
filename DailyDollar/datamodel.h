@@ -7,11 +7,17 @@
 enum DBSuccess{success, failure};
 DBSuccess setupDB(QSqlDatabase *db);
 
-class DataModel : public QAbstractTableModel
+class TransactionModel : public QAbstractTableModel
 {
 public:
-    explicit DataModel();
+    explicit TransactionModel();
 
+};
+
+class RecurringModel : public QAbstractTableModel
+{
+public:
+    explicit RecurringModel();
 };
 
 #endif // DATAMODEL_H

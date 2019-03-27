@@ -6,5 +6,6 @@
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>Recurring.qml</file>
+        <file>TransactionListDelegate.qml</file>
     </qresource>
 </RCC>

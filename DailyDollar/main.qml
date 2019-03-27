@@ -5,7 +5,7 @@ ApplicationWindow {
     visible: true
     width: 720
     height: 1280
-    title: qsTr("Tabs")
+    title: qsTr("DailyDollar")
 
     SwipeView {
         id: swipeView
